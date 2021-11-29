@@ -1,0 +1,19 @@
+.width{
+    position: relative;
+    width: 200px;
+    z-index: 99;
+
+}
+.margin{
+    margin-top: 175px;
+}
+.set-position{
+    width: 450px;
+    background-color: rgba(240, 218, 20, 0.788);
+    padding-left: 265px;
+    padding-right: 90px;
+    margin-top: -70px;
+    margin-left: 300px;
+    margin-right: 300px;
+    height: 50px;
+}
