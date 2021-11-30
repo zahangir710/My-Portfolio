@@ -1,0 +1,18 @@
+.about-bg{
+    background-image: repeating-radial-gradient(rgba(22, 125, 133, 0.719), rgb(218, 112, 25));
+}
+
+
+@media only screen and (max-width: 991px) and (min-width: 767px)  {
+    .image{
+        padding-top: 50px;
+    }
+    .font{
+        font-size: 30px;
+    }
+}
+@media only screen and (max-width: 375px){
+    .responsive-margin{
+        margin-bottom: 10px;
+    }
+}

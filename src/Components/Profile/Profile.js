@@ -8,7 +8,7 @@ const Profile = () => {
   return (
     <Container id="home" className="mb-5">
       <Row>
-        <Col md={{ span: 8, offset: 2 }}>
+        <Col className="profile-container mt-5" md={{ span: 8, offset: 2 }}>
           <div className="text-center d-flex justify-content-center margin">
             <div>
               <Fade left>
