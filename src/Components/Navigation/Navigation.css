@@ -1,0 +1,9 @@
+.link-style{
+    text-decoration: none;
+    margin-left: 20px;
+    color: #fff;
+}
+.link-style:hover{
+    color: rgba(240, 218, 20, 0.788);
+    transition: all linear 0.3s;
+}

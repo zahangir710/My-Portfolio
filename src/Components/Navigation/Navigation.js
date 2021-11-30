@@ -1,11 +1,12 @@
 import React from "react";
-import { Container, Nav, Navbar } from "react-bootstrap";
+import { Button, Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import "./Navigation.css";
 const Navigation = () => {
   return (
     <Navbar
-      bg="dark fw-bold fs-5"
+      bg="dark  fs-5"
       variant="dark"
       expand="lg"
       sticky="top"
@@ -15,21 +16,21 @@ const Navigation = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link as={Link} to="#home">
+            <HashLink className="link-style" smooth to="/home#home">
               Home
-            </Nav.Link>
-            <Nav.Link as={Link} to="/home#about">
+            </HashLink>
+            <HashLink className="link-style" smooth to="#about">
               About
-            </Nav.Link>
-            <Nav.Link as={Link} to="/home#skills">
+            </HashLink>
+            <HashLink className="link-style" smooth to="#skills">
               Skills
-            </Nav.Link>
-            <Nav.Link as={Link} to="/home#projects">
+            </HashLink>
+            <HashLink className="link-style" smooth to="#projects">
               Projects
-            </Nav.Link>
-            <Nav.Link as={Link} to="/home#contact">
+            </HashLink>
+            <HashLink className="link-style" smooth to="#contact">
               Contact
-            </Nav.Link>
+            </HashLink>
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -5,11 +5,11 @@
 
 }
 .margin{
-    margin-top: 175px;
+    margin-top: 100px;
 }
 .set-position{
     width: 450px;
-    background-color: rgba(240, 218, 20, 0.788);
+    background-image: linear-gradient(orange, rgba(240, 218, 20, 0.788));
     padding-left: 265px;
     padding-right: 90px;
     margin-top: -70px;

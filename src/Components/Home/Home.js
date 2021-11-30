@@ -1,15 +1,11 @@
 import React from "react";
-import Contact from "../Contact/Contact";
-import Navigation from "../Navigation/Navigation";
 import Profile from "../Profile/Profile";
 import "./Home.css";
 
 const Home = () => {
   return (
-    <div>
-      <Navigation></Navigation>
+    <div id="home">
       <Profile></Profile>
-      <Contact></Contact>
     </div>
   );
 };

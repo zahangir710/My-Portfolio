@@ -1,4 +1,5 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
+import Bounce from "react-reveal/Fade";
 import emailjs from "emailjs-com";
 import {
   Button,
@@ -7,10 +8,16 @@ import {
   FloatingLabel,
   Form,
   Row,
+  Toast,
 } from "react-bootstrap";
 const Contact = () => {
+  const [isToast, setIsToast] = useState(false);
+  const handleCloseToast = () => {
+    setIsToast(false);
+  };
   const form = useRef();
   const sendEmail = (e) => {
+    setIsToast(false);
     e.preventDefault();
     emailjs
       .sendForm(
@@ -22,6 +29,7 @@ const Contact = () => {
       .then(
         (result) => {
           console.log(result.text);
+          setIsToast(true);
         },
         (error) => {
           console.log(error.text);
@@ -29,21 +37,13 @@ const Contact = () => {
       );
     e.target.reset();
   };
+
   return (
-    // <form ref={form} onSubmit={sendEmail}>
-    //   <label>Name</label>
-    //   <input type="text" name="user_name" />
-    //   <label>Email</label>
-    //   <input type="email" name="user_email" />
-    //   <label>Message</label>
-    //   <textarea name="message" />
-    //   <input type="submit" value="Send" />
-    // </form>
-    <Container className="my-5">
+    <Container id="contact">
       <Form ref={form} onSubmit={sendEmail}>
         <Row>
           <Col md={{ span: 6, offset: 3 }}>
-            <h4 className="text-center mb-4">Contact Me</h4>
+            <h4 className="text-center mt-5 mb-4">Contact Me</h4>
             <FloatingLabel label="Name" className="mb-3">
               <Form.Control
                 required
@@ -85,9 +85,28 @@ const Contact = () => {
                 required
               />
             </FloatingLabel>
-            <Button className="mt-3" variant="dark" type="submit" value="Send">
+            <Button
+              className="mt-3 mb-4"
+              variant="dark"
+              type="submit"
+              value="Send"
+            >
               Send
             </Button>
+
+            {/* toast */}
+            {isToast && (
+              <Bounce right>
+                <Toast>
+                  <Toast.Header onClick={handleCloseToast}>
+                    <img src="" className="rounded me-2" alt="" />
+                    <strong className="me-auto">Message sent!</strong>
+                    <small>Close</small>
+                  </Toast.Header>
+                  <Toast.Body>Thank you. Will reply you shortly</Toast.Body>
+                </Toast>
+              </Bounce>
+            )}
           </Col>
         </Row>
       </Form>

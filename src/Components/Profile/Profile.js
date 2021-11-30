@@ -1,11 +1,12 @@
 import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Button, Col, Container, Row } from "react-bootstrap";
 import Fade from "react-reveal/Fade";
 import Bounce from "react-reveal/Bounce";
 import "./Profile.css";
+import { Link } from "react-router-dom";
 const Profile = () => {
   return (
-    <Container id="home">
+    <Container id="home" className="mb-5">
       <Row>
         <Col md={{ span: 8, offset: 2 }}>
           <div className="text-center d-flex justify-content-center margin">
@@ -32,6 +33,23 @@ const Profile = () => {
               </div>
             </Bounce>
           </div>
+          <Fade bottom>
+            <div className="text-center my-5">
+              <Button
+                href="./Md_Zahangir_Hossain_Resume_2021.pdf"
+                download
+                className="me-4 px-5"
+                variant="secondary"
+              >
+                Resume
+              </Button>
+              <Link to="/explore">
+                <Button className="ms-4 px-4" variant="dark">
+                  Explore More
+                </Button>
+              </Link>
+            </div>
+          </Fade>
         </Col>
       </Row>
     </Container>
