@@ -8,7 +8,7 @@ const Profile = () => {
   return (
     <Container id="home" className="mb-5">
       <Row>
-        <Col className="profile-container mt-5" md={{ span: 8, offset: 2 }}>
+        <Col className="profile-container mt-5" md={{ span: 6, offset: 3 }}>
           <div className="text-center d-flex justify-content-center margin">
             <div>
               <Fade left>
@@ -20,7 +20,7 @@ const Profile = () => {
               </Fade>
             </div>
             <Fade top>
-              <div className="text-start ms-3 mt-4">
+              <div className="text-start ms-3 mt-5">
                 <h3 className="mb-2">Hossain</h3>
                 <h4>Md Zahangir</h4>
               </div>
@@ -29,12 +29,12 @@ const Profile = () => {
           <div className="d-flex justify-content-center">
             <Bounce right>
               <div className="set-position rounded">
-                <h6 className="lh-md mt-1">Frontend Developer</h6>
+                <h6 className="lh-lg mt-1">Frontend Developer</h6>
               </div>
             </Bounce>
           </div>
           <Fade bottom>
-            <div className="text-center my-5">
+            <div className="text-center my-4">
               <Button
                 href="./Md_Zahangir_Hossain_Resume_2021.pdf"
                 download
