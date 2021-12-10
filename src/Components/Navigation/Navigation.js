@@ -5,13 +5,7 @@ import { HashLink } from "react-router-hash-link";
 import "./Navigation.css";
 const Navigation = () => {
   return (
-    <Navbar
-      bg="dark  fs-5"
-      variant="dark"
-      expand="lg"
-      sticky="top"
-      className="background"
-    >
+    <Navbar bg="fs-5" expand="lg" sticky="top">
       <Container>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
